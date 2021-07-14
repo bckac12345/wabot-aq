@@ -1,6 +1,6 @@
 <?php
 //Get the status and decode the JSON
-$status = json_decode(file_get_contents('https://api.mcsrvstat.us/2/domain.tld'));
+$status = json_decode(file_get_contents('https://api.mcsrvstat.us/bedrock/2/play.lunaticmc.xyz'));
 
 //Show the version
 echo $status->version;
@@ -9,9 +9,9 @@ echo $status->version;
 foreach ($status->players->list as $player) {
 	echo $player.'<br />';
 }
-handler.help = ['menu', 'help', '?']
+handler.help = ['cek', 'server', 'serv']
 handler.tags = ['main']
-handler.command = /^(menu|help|\?)$/i
+handler.command = /^(cek|server|\serv)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
